@@ -1,19 +1,19 @@
-# Faça um programa que leia um número entre 0 e 999 e imprima esse número com 3 algarismos. Exemplo, 23 gera uma saída 023 e 8 gera uma saída 008.
+# Faï¿½a um programa que leia um nï¿½mero entre 0 e 999 e imprima esse nï¿½mero com 3 algarismos. Exemplo, 23 gera uma saï¿½da 023 e 8 gera uma saï¿½da 008.
 
 .text
 main: 
-     li $2, 5 # aciona o serviço 5, que lê um número inteiro
+     li $2, 5 # aciona o serviï¿½o 5, que lï¿½ um nï¿½mero inteiro
      syscall 
      
-     move $8, $2 # pega o conteúdo do registrador 2 e move pro 8
+     move $8, $2 # pega o conteï¿½do do registrador 2 e move pro 8
      
      li $16, 100 
      li $17, 10
      li $18, 1
      
      div $8, $16 # pega 23 e divide por 100, gera quociente 0  e resto 23
-     mflo $11 # pega o 0 que está em lo e move pro registrador 4
-     mfhi $9 # pega o que está em hi e move pro registrador 9
+     mflo $11 # pega o 0 que estï¿½ em lo e move pro registrador 4
+     mfhi $9 # pega o que estï¿½ em hi e move pro registrador 9
      
      div $9 $17 # 3 resto, e 2 de quociente
      mflo $12
@@ -23,7 +23,7 @@ main:
      mflo $13
      
      move $4, $11
-     li $2, 1 # imprime o conteúdo do registrador 4
+     li $2, 1 # imprime o conteï¿½do do registrador 4
      syscall
      
      move $4, $12
@@ -32,6 +32,9 @@ main:
      
      move $4, $13
      li $2, 1
+     syscall
+
+     li $2, 10
      syscall
      
      
